@@ -3,8 +3,17 @@
 {% block title %}Ana Sayfa{% endblock %}
 
 {% block content %}
-<div class="text-center mt-16">
-  <h1 class="text-4xl font-bold">Turizm Belgelendirme</h1>
-  <p class="mt-4 text-lg">Kalite ve güven ile belgelendirme hizmeti.</p>
-</div>
+<section class="relative h-screen bg-cover bg-center" style="background-image: url('/static/images/hero.jpg');">
+  <!-- karartma -->
+  <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+
+  <!-- yazı + buton -->
+  <div class="relative z-10 h-full flex flex-col items-center justify-center text-white text-center px-4 animate-fade-in">
+    <h1 class="text-5xl md:text-6xl font-extrabold drop-shadow-lg mb-6">Turizm Belgelendirme</h1>
+    <p class="text-xl md:text-2xl max-w-2xl drop-shadow-md mb-8">Müşterilerimizin karar vermelerine yardımcı olmak, hızlı hareket etmek ve kalıcı fırsatlarla dolu bir dünyayı yakalamaları için buradayız.</p>
+    <a href="/apply" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-xl shadow-lg hover:scale-105 transition-all duration-300 font-semibold">
+      Hemen Başvur
+    </a>
+  </div>
+</section>
 {% endblock %}

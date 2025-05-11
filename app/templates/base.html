@@ -1,12 +1,69 @@
 <!DOCTYPE html>
 <html lang="tr">
+  <!-- AOS (Animate on Scroll) -->
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    AOS.init({
+      duration: 800,
+      once: true
+    });
+  });
+</script>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{% block title %}Turizm Belgelendirme{% endblock %}</title>
-  <link href="/static/css/tailwind.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{% block title %}TurizmWeb{% endblock %}</title>
+  <link href="/static/css/tailwind.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body class="font-sans bg-gray-50 text-gray-900">
+
+  <!-- ÜST BİLGİ ALANI - saydam siyah zeminle resmin üstünde -->
+<div class="absolute top-0 left-0 w-full bg-black bg-opacity-40 text-white text-sm py-2 px-4 flex justify-between items-center z-40">
+  <div class="flex space-x-6">
+    <span>📞 0212 343 50 50</span>
+    <span>✉️ info@turizmbelgelendirme.com</span>
+    <span>🕘 Pzt - Cuma: 9:00 - 18:00</span>
+  </div>
+  <div class="flex space-x-3">
+    <a href="#" class="hover:text-pink-400">📷</a>
+    <a href="#" class="hover:text-red-500">▶️</a>
+    <a href="#" class="hover:text-blue-400">📘</a>
+  </div>
+</div>
+
+  <!-- NAVBAR - sadece butonlar -->
+  <nav class="absolute top-0 right-0 z-50 px-10 pt-20">
+    <ul class="flex gap-x-8 text-white text-lg font-medium">
+      <li><a href="/" class="hover:text-blue-300 transition-all duration-200">Ana Sayfa</a></li>
+      <li><a href="/about" class="hover:text-blue-300 transition-all duration-200">Hakkımızda</a></li>
+      <li><a href="/services" class="hover:text-blue-300 transition-all duration-200">Hizmetlerimiz</a></li>
+      <li><a href="/contact" class="hover:text-blue-300 transition-all duration-200">İletişim</a></li>
+      <li><a href="/references" class="hover:text-blue-300 transition-all duration-200">Referanslar</a></li>
+      <li x-data="{ open: false }" class="relative">
+        <button @click="open = !open" class="hover:text-blue-300">Mevzuat ⌄</button>
+        <ul x-show="open" @click.away="open = false" class="absolute right-0 mt-2 bg-white text-black border rounded shadow-lg w-40">
+          <li><a href="/law1" class="block px-4 py-2 hover:bg-blue-50">Yönetmelik 1</a></li>
+          <li><a href="/law2" class="block px-4 py-2 hover:bg-blue-50">Yönetmelik 2</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="/apply" class="ml-4 bg-blue-600 bg-opacity-80 hover:bg-opacity-100 px-4 py-2 rounded-xl shadow hover:scale-105 transition transform duration-300">
+          Hemen Başvur
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- SAYFA İÇERİĞİ -->
   {% block content %}{% endblock %}
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-200 text-center text-sm py-4 mt-10">
+    © 2025 Turizm Belgelendirme. Tüm hakları saklıdır.
+  </footer>
+
 </body>
 </html>

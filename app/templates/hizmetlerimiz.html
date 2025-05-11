@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+
+{% block title %}Hizmetlerimiz{% endblock %}
+
+{% block content %}
+<!-- HİZMETLER SAYFASI (tek section, arka planlı) -->
+<section class="relative min-h-screen bg-fixed bg-center bg-no-repeat bg-cover pt-40 pb-20 px-6 md:px-20"
+         style="background-image: url('/static/images/services-bg.jpg');">
+  
+  <!-- Siyah transparan katman -->
+  <div class="absolute inset-0 bg-black bg-opacity-50 z-0"></div>
+
+  <!-- Tüm içerik -->
+  <div class="relative z-10 max-w-6xl mx-auto text-center text-white">
+
+    <!-- Sayfa Başlığı -->
+    <h1 class="text-5xl font-bold mb-4">Hizmetlerimiz</h1>
+    <p class="text-xl max-w-3xl mx-auto text-gray-200 mb-16">
+      Turizm sektörüne yönelik tüm belgelendirme hizmetlerimiz hakkında bilgi alın.
+    </p>
+
+    <!-- ✅ Konaklama Tesisleri -->
+    <h2 class="text-4xl font-bold text-white mb-12">Konaklama Tesisleri</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 mb-20">
+      <div class="bg-white bg-opacity-90 rounded-xl shadow-md p-6 text-center hover:shadow-xl transition duration-300" data-aos="zoom-in">
+        <div class="text-4xl mb-4">🏨</div>
+        <h3 class="text-lg font-semibold text-blue-900">Tesislere 1-5 Yıldız Arası Belgelendirme</h3>
+      </div>
+      <div class="bg-white bg-opacity-90 rounded-xl shadow-md p-6 text-center hover:shadow-xl transition duration-300" data-aos="zoom-in" data-aos-delay="100">
+        <div class="text-4xl mb-4">🏡</div>
+        <h3 class="text-lg font-semibold text-blue-900">Pansiyon Turizm İşletmesi Belgesi</h3>
+      </div>
+      <div class="bg-white bg-opacity-90 rounded-xl shadow-md p-6 text-center hover:shadow-xl transition duration-300" data-aos="zoom-in" data-aos-delay="200">
+        <div class="text-4xl mb-4">🏘️</div>
+        <h3 class="text-lg font-semibold text-blue-900">Apart Turizm İşletmesi Belgesi</h3>
+      </div>
+      <div class="bg-white bg-opacity-90 rounded-xl shadow-md p-6 text-center hover:shadow-xl transition duration-300" data-aos="zoom-in" data-aos-delay="300">
+        <div class="text-4xl mb-4">🌾</div>
+        <h3 class="text-lg font-semibold text-blue-900">Kırsal Turizm İşletmesi Belgesi</h3>
+      </div>
+      <div class="bg-white bg-opacity-90 rounded-xl shadow-md p-6 text-center hover:shadow-xl transition duration-300" data-aos="zoom-in" data-aos-delay="400">
+        <div class="text-4xl mb-4">🏠</div>
+        <h3 class="text-lg font-semibold text-blue-900">Özel Konaklama Tesisi Belgesi</h3>
+      </div>
+      <div class="bg-white bg-opacity-90 rounded-xl shadow-md p-6 text-center hover:shadow-xl transition duration-300" data-aos="zoom-in" data-aos-delay="500">
+        <div class="text-4xl mb-4">🏨</div>
+        <h3 class="text-lg font-semibold text-blue-900">Butik Hotel Belgesi</h3>
+      </div>
+      <div class="bg-white bg-opacity-90 rounded-xl shadow-md p-6 text-center hover:shadow-xl transition duration-300" data-aos="zoom-in" data-aos-delay="600">
+        <div class="text-4xl mb-4">⛺</div>
+        <h3 class="text-lg font-semibold text-blue-900">Kamping Belgesi</h3>
+      </div>
+      <div class="bg-white bg-opacity-90 rounded-xl shadow-md p-6 text-center hover:shadow-xl transition duration-300" data-aos="zoom-in" data-aos-delay="700">
+        <div class="text-4xl mb-4">🏘️</div>
+        <h3 class="text-lg font-semibold text-blue-900">Konutların Turizm Amaçlı Kiralanması İzin Belgesi</h3>
+      </div>
+    </div>
+
+    <!-- ✅ Yeme-İçme Tesisleri -->
+    <h2 class="text-4xl font-bold text-white mb-12">Yeme-İçme Tesisleri</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 mb-20">
+      <div class="bg-white bg-opacity-90 rounded-xl shadow-md p-6 text-center hover:shadow-xl transition" data-aos="zoom-in">
+        <div class="text-4xl mb-4">🍽️</div>
+        <h3 class="text-lg font-semibold text-blue-900">Restoran Belgesi</h3>
+      </div>
+      <div class="bg-white bg-opacity-90 rounded-xl shadow-md p-6 text-center hover:shadow-xl transition" data-aos="zoom-in" data-aos-delay="100">
+        <div class="text-4xl mb-4">☕</div>
+        <h3 class="text-lg font-semibold text-blue-900">Kafe İşletme Belgesi</h3>
+      </div>
+      <div class="bg-white bg-opacity-90 rounded-xl shadow-md p-6 text-center hover:shadow-xl transition" data-aos="zoom-in" data-aos-delay="200">
+        <div class="text-4xl mb-4">🍷</div>
+        <h3 class="text-lg font-semibold text-blue-900">Bar / Gece Kulübü Belgesi</h3>
+      </div>
+    </div>
+
+    <!-- ✅ Deniz Turizmi Belgelendirmeleri -->
+    <h2 class="text-4xl font-bold text-white mb-12">Deniz Turizmi Belgelendirmeleri</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+      <div class="bg-white bg-opacity-90 rounded-xl shadow-md p-6 text-center hover:shadow-xl transition" data-aos="zoom-in">
+        <div class="text-4xl mb-4">🚤</div>
+        <h3 class="text-lg font-semibold text-blue-900">Yat İşletme Belgesi</h3>
+      </div>
+      <div class="bg-white bg-opacity-90 rounded-xl shadow-md p-6 text-center hover:shadow-xl transition" data-aos="zoom-in" data-aos-delay="100">
+        <div class="text-4xl mb-4">⚓</div>
+        <h3 class="text-lg font-semibold text-blue-900">Liman/Kıyı Tesis Belgesi</h3>
+      </div>
+      <div class="bg-white bg-opacity-90 rounded-xl shadow-md p-6 text-center hover:shadow-xl transition" data-aos="zoom-in" data-aos-delay="200">
+        <div class="text-4xl mb-4">🛥️</div>
+        <h3 class="text-lg font-semibold text-blue-900">Günübirlik Deniz Turu Belgesi</h3>
+      </div>
+    </div>
+
+  </div>
+</section>
+{% endblock %}
